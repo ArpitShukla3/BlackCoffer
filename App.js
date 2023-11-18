@@ -8,7 +8,7 @@ const urlEncoded = express.urlencoded;
 dataBaseConnect();
 app.use(express.json());
 app.use(cookieParse());
-const PORT=5001;
+const PORT=process.env.PORT||5001;
 app.use(cors({
     orgin:"http://localhost:5173",
     credentials:true
