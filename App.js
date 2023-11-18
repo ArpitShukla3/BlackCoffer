@@ -9,13 +9,10 @@ dataBaseConnect();
 app.use(express.json());
 app.use(cookieParse());
 const PORT=process.env.PORT||5001;
-app.use(cors({
-    orgin:"http://localhost:5173",
-    credentials:true
-}))
+app.use(cors())
 app.use("/",route);
 export default app;
 app.listen(PORT,()=>
 {
     console.log("Server is listening at port: "+PORT);
-})   
+})    
