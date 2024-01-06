@@ -1,17 +1,24 @@
 import mongoose from "mongoose";
 const {Schema}=mongoose;
-const Heliverse=new Schema({
-    
-id:{},
-first_name:{},
-last_name:{},
-email:{},
-gender:{},
-avatar:{},
-domain:{},
-available:{},
-false:{}
+const Blackoffer=new Schema({
+    end_year: String,
+    intensity: Number,
+    sector: String,
+    topic: String,
+    insight: String,
+    url: String,
+    region: String,
+    start_year: String,
+    impact: String,
+    added: String,
+    published: String,
+    country: String,
+    relevance: Number,
+    pestle: String,
+    source: String,
+    title: String,
+    likelihood: Number
 });
    
-const heliverse=mongoose.model("Heliverse",Heliverse);
-export default heliverse; 
+const blackoffers=mongoose.model("blackoffers",Blackoffer);
+export default blackoffers; 
